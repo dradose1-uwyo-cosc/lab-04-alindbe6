@@ -1,8 +1,8 @@
-# Your Name Here
+# Adam Lindberg
 # UWYO COSC 1010
-# Submission Date
+# 10/1/24
 # Lab 03 
-# Lab Section: 
+# Lab Section: 10
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -99,7 +99,45 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+total_max = 0
+for i in range(0,len(max_temps)):
+    total_max = total_max + max_temps[i]
+avg_max = total_max/len(max_temps)
+print(avg_max)
+
+total_min = 0
+for i in range(0,len(min_temps)):
+    total_min = total_min + min_temps[i]
+avg_min = round(total_min/len(min_temps),2)
+print(avg_min)
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
+max_max = max_temps[0]
+for i in range(0,len(max_temps)):
+    if max_temps[i] > max_max:
+        max_max = max_temps[i]
+print(max_max)
+print(max(max_temps))
 
+min_max = max_temps[0]
+for i in range(0,len(max_temps)):
+    if max_temps[i] < min_max:
+        min_max = max_temps[i]
+print(min_max)
+print(min(max_temps))
+
+max_min = min_temps[0]
+for i in range(0,len(min_temps)):
+    if min_temps[i] > max_min:
+        max_min = min_temps [i]
+print(max_min)
+print(max(min_temps))
+
+min_min = min_temps[0]
+for i in range(0,len(min_temps)):
+    if min_temps[i] < min_min:
+        min_min = min_temps [i]
+print(min_min)
+print(min(min_temps))
